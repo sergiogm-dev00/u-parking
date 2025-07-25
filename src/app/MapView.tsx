@@ -77,7 +77,7 @@ export default function MapView({ center, university, showAllPins }: MapViewProp
               <Marker key={loc.name} position={loc.coords}>
                 <Popup>
                   <div className="font-semibold">{loc.name}</div>
-                  Plazas disponibles: {plazas[i]}/{loc.total}.
+                  Available parking spaces: {plazas[i]}/{loc.total}.
                 </Popup>
               </Marker>
             ))
@@ -85,7 +85,7 @@ export default function MapView({ center, university, showAllPins }: MapViewProp
               <Marker position={otherUniversities[university]}>
                 <Popup>
                   <div className="font-semibold">{university}</div>
-                  Plazas disponibles: {Math.floor(Math.random() * 201) + 50}/250.
+                  Available parking spaces: {Math.floor(Math.random() * 201) + 50}/250.
                 </Popup>
               </Marker>
             )
@@ -95,7 +95,7 @@ export default function MapView({ center, university, showAllPins }: MapViewProp
         <Marker key={loc.name} position={loc.coords}>
           <Popup>
             <div className="font-semibold">{loc.name}</div>
-            Plazas disponibles: {plazas[i]}/{loc.total}.
+            Available parking spaces: {plazas[i]}/{loc.total}.
           </Popup>
         </Marker>
       ))}
