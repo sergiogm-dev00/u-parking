@@ -2,7 +2,9 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import MapView from './MapView';
+import dynamic from 'next/dynamic';
+// Dynamically import MapView with SSR disabled
+const MapView = dynamic(() => import('./MapView'), { ssr: false });
 
 export default function Login() {
   const [username, setUsername] = useState("");
